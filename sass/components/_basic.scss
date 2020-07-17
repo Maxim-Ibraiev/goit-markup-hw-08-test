@@ -1,0 +1,84 @@
+/* basic*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  max-width: 480px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--color-basic);
+
+  @media screen and (min-width: 480px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 1600px;
+  }
+}
+
+.container {
+  max-width: 450px;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 1200px;
+  }
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.16;
+  text-align: center;
+
+  color: var(--color-title);
+  
+  &-white {
+    color: var(--color-white);
+  }
+}
+
+.header-title h3 {
+  font-size: 14px;
+  line-height: 1.14;
+
+  color: var(--color-title);  
+}
+
+// .nav-header,
+// .nav,
+// .nav-address,
+// .main-header,
+// .button,
+// .header-title,
+// .header-title-list {
+//   display: flex;
+// }
+
+.space-94     { margin-top:     94px;}
+.space-94-pb  { padding-bottom: 94px;}

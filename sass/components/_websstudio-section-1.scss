@@ -1,0 +1,139 @@
+/* webstudio section 1*/
+.header-img {
+    width: 1600px;
+    height: 600px;
+}
+.clear {
+  position: absolute;
+
+  color: rgba(0, 0, 0, 0.8);
+}
+// .header {
+//   font-size: 44px;
+//   font-weight: 900;
+//   line-height: 1.36;
+// }
+.main-header {
+  position: relative;
+
+  height: 600px;
+
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  background-image: linear-gradient( rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+  url(../images/header.jpg);
+  background-size: 1600px 600px;
+}
+
+.header-style {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 6%;
+  vertical-align: top;
+
+  color: var(--color-white);
+}
+
+.button {
+  min-width: 200px;
+  max-width: fit-content;
+  height: 50px;
+
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  text-decoration: none;
+  
+  color: #ffffff;
+  background-color: var(--color-accent);
+  border: 5px solid var(--color-accent);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+/* header title list */
+
+.transparent { display: none;}
+
+.header-title {
+  flex-wrap: wrap;
+  align-content: center;
+  
+  li { 
+    width: calc((100% - 90px) / 4);
+  }
+
+  li:not(:nth-child(4n))  { margin-right: auto;}
+  li:last-child           { margin-right: 0px;}
+  li:nth-child(n + 5)     { margin-top: 30px;}
+}
+
+.antenna,
+.clock,
+.diagram,
+.astronaut {
+  width: 100%;
+  height: 120px;
+  
+  background-size: 70px 70px, 270px 120px;
+}
+.header-title-list {
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+  .antenna {
+    background: url(../images/antenna.png ), var(--color-background);
+    background-repeat: no-repeat;
+    background-position: 50% 50%, 100% 100%;
+  }
+  .clock {background: url(../images/clock.png), var(--color-background);
+    background-repeat: no-repeat;
+    background-position: 50% 50%, 100% 100%;
+  }
+
+  .diagram {background: url(../images/diagram.png), var(--color-background);
+    background-repeat: no-repeat;
+    background-position: 50% 50%, 100% 100%;
+  }
+
+  .astronaut {background: url(../images/astronaut.png), var(--color-background);
+    background-repeat: no-repeat;
+    background-position: 50% 50%, 100% 100%;
+  }
+  
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 0;
+
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.title p {
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: var(--color-basic);
+}
+
+.title-white p {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

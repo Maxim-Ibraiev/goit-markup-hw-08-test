@@ -1,0 +1,116 @@
+/* webstudio section 3 */
+.bg-gray {
+    background-color: var(--color-background);
+  }
+  
+  .our-team {
+    padding-top: 94px;
+    margin-bottom: 50px;
+  }
+  
+  .title-team b {
+    padding-top: 30px;
+  
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+  
+    color: var(--color-title);
+  }
+  
+  .title-team p {
+    margin-top: 10px;
+  
+    font-size: 16px;
+    line-height: 1.18;
+    
+    color: var(--color-basic);
+  }
+  
+  
+  .title-team {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .title-team > li{
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  }
+  
+  .title-team li:not(:nth-child(4n))  { margin-right: auto;}
+  .title-team li:last-child           { margin-right: 0px;}
+  .title-team li:nth-child(n + 5)     { margin-top: 50px;}
+  
+  .social-link li:not(:nth-child(4n))  { margin-right: 11px;}
+  .social-link li:last-child           { margin-right: 0px;}
+  
+  .social-link a {
+    display: inline-flex; 
+    justify-content: center; 
+    align-items:center;
+    
+    width: 44px;
+    height: 44px;
+  
+    transition: background-color var(--animation) var(--cubic-bezier);
+  
+    border-radius: 50%;
+  }
+  
+  .social-link a:hover,
+  .social-link a:focus {
+    --color1: var(--color-white);
+    border-radius: 50%;
+    background-color: var(--color-accent);
+  }
+  
+  .social-link li{
+    width: 44px;
+    height: 44px;
+  }
+  
+  .icon-social-link {
+    display: flex;
+    display: block;
+    margin: auto;
+  }
+  
+  .social-link.link-style { 
+    display: flex; 
+    width: 270px;
+    justify-content: center;
+  }
+  
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    background-color: var(--color-white);
+    width: 270px;
+    height: 162px;
+    border-radius: 0px 0px 4px 4px;
+  }
+  
+  .nikolay-kucherenko {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .olga-ivanova {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .andrey-shevchenko {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ivan-nikolaev {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

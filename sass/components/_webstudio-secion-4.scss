@@ -1,0 +1,39 @@
+/*
+    webstudio section 4
+ */
+
+ .our-customs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    margin-top: 50px;
+  }
+  
+  .our-customs a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 90px;
+    width: 170px;
+  
+    transition: border-color var(--animation) var(--cubic-bezier);
+  
+    box-sizing: border-box;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+  }
+  
+  .icon-logo {
+    max-height: 52px;
+  }
+  .our-customs a:hover,
+  .our-customs a:focus {
+    --color1: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+  
+  .our-customs li:not(:nth-child(6n)) { margin-right: calc((100% - 1020px) / 5);}
+  .our-customs li:last-child          { margin-right: 0px;}
+  .our-customs li:nth-child(n + 7)    { margin-top: 50px;}
