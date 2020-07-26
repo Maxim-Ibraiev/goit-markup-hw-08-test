@@ -53,7 +53,6 @@
 }
 
 .menu-button {
-  // display: flex;
   display: none;
 }
 
@@ -98,6 +97,8 @@
   .menu {
     position: absolute;
 
+    z-index: 1;
+
     display: none;
     
     top: 60px;
@@ -136,17 +137,26 @@
 
 // tablet nav
 
-@media screen and (min-width: 481px) {
-  .menu {
-    margin-left: auto;
-  }
-  
+@media screen and (min-width: 481px) 
+// and (max-width: 768px) 
+{
   .nav  {
     display: flex;
-    // align-items: center;
     height: 80px;
     
     margin-right: auto;
+
+    max-width: 294px;
+    
+    @media screen and (max-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media screen and (max-width: 639px) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
 
     &-link {
       display: block;
@@ -154,28 +164,10 @@
       padding-top: 30px;
       padding-bottom: 30px;
     }
-  
-    // &-header {
-    //   // align-items: center;
-    // }
-  
-    // &{
-    // // margin: auto;
-    // }
-    
 
-    & {
-      max-width: 294px;
-      margin-left: auto;
-      margin-right: auto;
-      
-      @media screen and (max-width: 639px) {
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-    }
     li:not(:last-child) {
       margin-right: auto;
+
       @media screen and (max-width: 549px) {
         .actual-page {
           display: none;
@@ -191,14 +183,15 @@
   .icon-smartphone svg {
     margin-right: 3px;
   }
+
   .menu {   
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+    
     width: 84%;
 
-    // margin-left: auto;
-
+    margin-left: auto;
   }
 
   .nav {
@@ -209,10 +202,6 @@
     font-size: 24px;
     min-width: 141px;  
     height: 28px;
-    display: block; 
-    // display: flex; 
-    // flex-wrap: nowrap;
-    // justify-content: space-between;
   }
 
   .nav-address {
@@ -230,8 +219,6 @@
   
   transition: color var(--animation) var(--cubic-bezier);
   
-  // &:visited {
-  //   color: var(--color-title);
   &:hover,
   &:focus {
     color: var(--color-accent);
@@ -266,28 +253,44 @@ nav .actual-page {
 
 /* nav address  */
 
-// @media screen and (min-width: 480px) {
-//   .nav-address {
-//     display: block;
-//     // top: 21px;
-//     // right: 15px;
+@media screen and (min-width: 769px) {
+  .nav-address {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
     
-//     // display: flex;
-//     // flex-direction: column;
-//     // justify-content: flex-end;
+    // top: 21px;
+    // right: 15px;
     
-//     // margin-left: 80px;
-//     // li:not(:last-child) {
-//     //   margin-right: 30px;
-//     // }
-//     // li:last-child {
-//     //   margin-right: 0px;
-//     }
-// }
+    // margin-left: 80px;
+    li:not(:last-child) {
+      margin-right: 30px;
+    }
+    // li:last-child {
+    //   margin-right: 0px;
+    // }
+    font-size: 14px;
+    
+  }
+
+  .menu {
+    margin-left: 85px;
+   
+    @media screen and (max-width: 962px) {
+      
+        margin-left: 25px;
+      
+      .nav {
+        margin-right: 15px;
+      }
+    }
+  }
+    
+}
 
 
 
-// @media screen and (min-width:768px) {
+// @media screen and (min-width:769px) {
 //   .nav-address {
 //     li:not(:last-child) {
 //       margin-right: 30px;

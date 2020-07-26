@@ -1,20 +1,44 @@
 /* modal window */
 
+.backdrop {
+  position: absolute;
+  top: -80px;
+  width: 100%;
+  height: 2890px;
+  
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition:opacity var(--animation) var(--cubic-bezier);
+}
+
 .modal {
   position: absolute;
-  top: 221px;
+  top: 93px;
+  left: 50%;
+  transform: translateX(-50%);
     
-  width: 528px;
+  width: calc(100% - 30px);
+  max-width: 450px;
+  // margin-left: 15px;
+  // margin-right: 15px;
   
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  margin-left: 534px;
-  margin-right: 534pc;
+  // margin-left: 534px;
+  // margin-right: 534px;
   padding: 40px;
 
   background-color: white;
+
+  @media screen and (min-width: $mobile-upper) {
+    top: 221px;
+  }
+
+  @media screen and (min-width: $table-upper){
+    width: 528px;
+  }
   
   &-border {
     padding-left: 42px;
@@ -75,15 +99,18 @@
 .modal {
   input:not([type="checkbox"]) {
     min-height: 40px;
-    width: 448px;
+    width: 100%;
   }
   
-  .modal .button {
-    margin: 30px auto 0;
+  .button {
+    margin-top: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
   }
   
   textarea[name="comment"] {
-    width: 448px;
+    width: 100%;
     min-height: 120px;
     resize: none;
   }
@@ -111,6 +138,8 @@
 
 .modal-label {
   position: relative;
+
+  width: 100%;
 
   margin-top: 28px;
   
@@ -176,28 +205,29 @@
   }
 }
 
-.icon-x {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 18px;
-  height: 18px;
-  }
 
 .modal-esc {
   position: absolute;
   top: -9px;
   right: -9px;
-
+  
   width: 30px;
   height: 30px;
-
+  
   
   border-radius: 50%;
   background-color: var(--color-white);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  
+  .icon-x {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .data-modal-close {
@@ -210,18 +240,6 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-}
-
-.backdrop {
-  position: absolute;
-  top: -80px;
-  left: 0;
-  width: 1600px;
-  height: 2890px;
-  
-  background-color: rgba(0, 0, 0, 0.2);
-
-  transition:opacity var(--animation) var(--cubic-bezier);
 }
 
 @keyframes placeholder {

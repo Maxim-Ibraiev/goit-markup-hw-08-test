@@ -17,9 +17,11 @@
           <span class="logo-web">Web </span>
           <span class="logo-studio">Studio</span>
         </a>
-        <div class="menu " data-menu>
+        <div class="menu" data-menu>
           <ul class="nav">
-            <li><a href="index.html" class="nav-link actual-page">Студия</a></li>
+            <li>
+              <a href="index.html" class="nav-link actual-page">Студия</a>
+            </li>
             <li><a href="portfolio.html" class="nav-link">Портфолио</a></li>
             <li><a href="" class="nav-link">Контакты</a></li>
           </ul>
@@ -27,27 +29,28 @@
             <li>
               <a href="mailto:info@devstudio.com" class="icon-envelope">
                 <svg width="16px" height="11.2px">
-                  <use
-                    href="./images/symbol-defs.svg#icon-envelope"
-                  ></use>
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use>
                 </svg>
                 info@devstudio.com
               </a>
             </li>
             <li>
               <a href="tel:+380961111111" class="icon-smartphone">
-                <svg width="10px" height="15px"   >
-                  <use
-                    href="./images/symbol-defs.svg#icon-smartphone"
-                  ></use>
+                <svg width="10px" height="15px">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                 </svg>
                 +38 096 111 11 11</a
               >
             </li>
           </ul>
         </div>
-        <button type="button" class="menu-button " data-menu-button
-        aria-expanded="false" aria-label="Переключатель мобитьного меню">
+        <button
+          type="button"
+          class="menu-button"
+          data-menu-button
+          aria-expanded="false"
+          aria-label="Переключатель мобитьного меню"
+        >
           <svg class="icon" height="40px" width="40px">
             <use
               class="icon-menu"
@@ -64,11 +67,83 @@
       <div>
         <section>
           <div class="main-header">
-            <h1 class="header-style">
-              Эффективные решения <br />
-              для вашего бизнеса
-            </h1>
-            <button data-modal-open class="button">Заказать услугу</button>
+            <div class="header-bg">
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="
+                    ./images/header-1600.webp    1600w,
+                    ./images/header-3200@2x.webp 3200w
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 481px)"
+                  srcset="
+                    ./images/header-480.webp      480w,
+                    ./images/header-768.webp      768w,
+                    ./images/header-960@2x.webp   960w,
+                    ./images/header-1536@2x.webp 1536w,
+
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(max-width: 480px)"
+                  srcset="
+                    ./images/header-480.webp    480w,
+                    ./images/header-960@2x.webp 960w,
+
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 769px)"
+                  srcset="
+                    ./images/header-1600.jpg    1600w,
+                    ./images/header-3200@2x.jpg 3200w
+                  "
+                />
+
+                <source
+                  media="(min-width: 481px)"
+                  srcset="
+                    ./images/header-480.jpg      480w,
+                    ./images/header-768.jpg      768w,
+                    ./images/header-960@2x.jpg   960w,
+                    ./images/header-1536@2x.jpg 1536w,
+
+                  "
+                />
+
+                <source
+                  media="(max-width: 480px)"
+                  srcset="
+                    ./images/header-480.jpg    480w,
+                    ./images/header-960@2x.jpg 960w,
+
+                  "
+                />
+
+                <img
+                  srcset="./images/header-480.jpg 480w"
+                  src="./images/header-480.jpg"
+                  alt="офис"
+                  max-width="100%"
+                  height="auto"
+                />
+              </picture>
+              <div class="main-header-description">
+                <h1 class="header-style">
+                  Эффективные решения <br />
+                  для вашего бизнеса
+                </h1>
+                <button data-modal-open class="button">Заказать услугу</button>
+              </div>
+              </div>
             <div data-modal class="backdrop is-hidden">
               <div class="modal">
                 <b>Оставьте свои данные, мы вам перезвоним</b>
@@ -184,13 +259,13 @@
 
         <!-- section 2 / Чем мы занимаемся  -->
 
-        <section class="space-94 container">
+        <section class="space-94 container modile-hidden">
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="title-white ind-sec-2">
-            <li class="desktop">
+            <li class="desktop test">
               <p>Десктопные приложения</p>
             </li>
-            <li class="phone">
+            <li class="phone test">
               <p>Мобильные приложения</p>
             </li>
             <li class="monitor">
@@ -203,14 +278,69 @@
 
         <section class="bg-gray space-94 space-94-pb">
           <h2 class="title our-team">Наша команда</h2>
-          <ul class="title-team container">
-            <li class="nikolay-kucherenko">
-              <img
-                src="./images/nikolay-kucherenko.jpg"
-                alt="Николай Кучеренко"
-                width="270"
-                height="260"
-              />
+          <ul class="title-team container ">
+            <li class="nikolay-kucherenk">
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="
+                    ./images/nikolay-kucherenko-270.webp    1x,
+                    ./images/nikolay-kucherenko-540@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 481px)"
+                  srcset="
+                  ./images/nikolay-kucherenko-354.webp    1x,
+                  ./images/nikolay-kucherenko-708@2x.webp 2x,
+                "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(max-width: 480px)"
+                  srcset="
+                  ./images/nikolay-kucherenko-450.webp    1x,
+                  ./images/nikolay-kucherenko-900@2x.webp 2x,
+                "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 769px)"
+                  srcset="
+                    ./images/nikolay-kucherenko-270.jpg    1x,
+                    ./images/nikolay-kucherenko-540@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 481px)"
+                  srcset="
+                  ./images/nikolay-kucherenko-354.jpg    1x,
+                  ./images/nikolay-kucherenko-708@2x.jpg 2x,
+                  "
+                  type="image/jpg"
+                  />
+                  
+                  <source
+                  media="(max-width: 480px)"
+                  srcset="
+                  ./images/nikolay-kucherenko-450.jpg    1x,
+                  ./images/nikolay-kucherenko-900@2x.jpg 2x,
+                  "
+                  type="image/jpg"
+                  />
+                  
+                <img
+                  src="./images/nikolay-kucherenko.jpg"
+                  alt="Николай Кучеренко"
+                  height="auto"
+                />
+              </picture>
               <div class="description">
                 <b>Николай Кучеренко</b>
                 <p>Product Designer</p>
@@ -257,12 +387,67 @@
               </div>
             </li>
             <li class="olga-ivanova">
-              <img
-                src="./images/olga-ivanova.jpg"
-                alt="Ольга Иванова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="
+                    ./images/olga-ivanova-270.webp    1x,
+                    ./images/olga-ivanova-540@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 481px)"
+                  srcset="
+                  ./images/olga-ivanova-354.webp    1x,
+                  ./images/olga-ivanova-708@2x.webp 2x,
+                  "
+                  type="image/webp"
+                  />
+                  
+                  <source
+                  media="(max-width: 480px)"
+                  srcset="
+                  ./images/olga-ivanova-450.webp    1x,
+                  ./images/olga-ivanova-900@2x.webp 2x,
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 769px)"
+                  srcset="
+                    ./images/olga-ivanova-270.jpg    1x,
+                    ./images/olga-ivanova-540@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 481px)"
+                  srcset="
+                  ./images/olga-ivanova-354.jpg    1x,
+                  ./images/olga-ivanova-708@2x.jpg 2x,
+                  "
+                  type="image/jpg"
+                  />
+                  
+                  <source
+                  media="(max-width: 480px)"
+                  srcset="
+                  ./images/olga-ivanova-450.jpg    1x,
+                  ./images/olga-ivanova-900@2x.jpg 2x,
+                  "
+                  type="image/jpg"
+                  />
+                  
+                <img
+                  src="./images/olga-ivanova.jpg"
+                  alt="Николай Кучеренко"
+                  height="auto"
+                />
+              </picture>
               <div class="description">
                 <b>Ольга Иванова</b>
                 <p>Frontend Developer</p>
@@ -309,12 +494,68 @@
               </div>
             </li>
             <li class="andrey-shevchenko">
-              <img
-                src="./images/andrey-shevchenko.jpg"
-                alt="Андрей Шевченко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="
+                    ./images/andrey-shevchenko-270.webp    1x,
+                    ./images/andrey-shevchenko-540@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 481px)"
+                  srcset="
+                  ./images/andrey-shevchenko-354.webp    1x,
+                  ./images/andrey-shevchenko-708@2x.webp 2x,
+                  
+                  "
+                  type="image/webp"
+                  />
+                  
+                  <source
+                  media="(max-width: 480px)"
+                  srcset="
+                  ./images/andrey-shevchenko-450.webp    1x,
+                  ./images/andrey-shevchenko-900@2x.webp 2x,
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 769px)"
+                  srcset="
+                    ./images/andrey-shevchenko-270.jpg    1x,
+                    ./images/andrey-shevchenko-540@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 481px)"
+                  srcset="
+                  ./images/andrey-shevchenko-354.jpg    1x,
+                  ./images/andrey-shevchenko-708@2x.jpg 2x,
+                  "
+                  type="image/jpg"
+                  />
+                  
+                  <source
+                  media="(max-width: 480px)"
+                  srcset="
+                  ./images/andrey-shevchenko-450.jpg    1x,
+                  ./images/andrey-shevchenko-900@2x.jpg 2x,
+                  "
+                  type="image/jpg"
+                  />
+                  
+                <img
+                  src="./images/andrey-shevchenko.jpg"
+                  alt="Николай Кучеренко"
+                  height="auto"
+                />
+              </picture>
               <div class="description">
                 <b>Андрей Шевченко</b>
                 <p>Marketing</p>
@@ -361,12 +602,68 @@
               </div>
             </li>
             <li class="ivan-nikolaev">
-              <img
-                src="./images/ivan-nikolaev.jpg"
-                alt="Иван Николаев"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="
+                    ./images/ivan-nikolaev-270.webp    1x,
+                    ./images/ivan-nikolaev-540@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 481px)"
+                  srcset="
+                  ./images/ivan-nikolaev-354.webp    1x,
+                  ./images/ivan-nikolaev-708@2x.webp 2x,
+                  
+                  "
+                  type="image/webp"
+                  />
+                  
+                  <source
+                  media="(max-width: 480px)"
+                  srcset="
+                  ./images/ivan-nikolaev-450.webp    1x,
+                  ./images/ivan-nikolaev-900@2x.webp 2x,
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 769px)"
+                  srcset="
+                    ./images/ivan-nikolaev-270.jpg    1x,
+                    ./images/ivan-nikolaev-540@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 481px)"
+                  srcset="
+                  ./images/ivan-nikolaev-354.jpg    1x,
+                  ./images/ivan-nikolaev-708@2x.jpg 2x,
+                  "
+                  type="image/jpg"
+                  />
+                  
+                  <source
+                  media="(max-width: 480px)"
+                  srcset="
+                  ./images/ivan-nikolaev-450.jpg    1x,
+                  ./images/ivan-nikolaev-900@2x.jpg 2x,
+                  "
+                  type="image/jpg"
+                  />
+                  
+                <img
+                  src="./images/ivan-nikolaev.jpg"
+                  alt="Николай Кучеренко"
+                  height="auto"
+                />
+              </picture>
               <div class="description">
                 <b>Иван Николаев</b>
                 <p>UI Designer</p>
@@ -419,43 +716,43 @@
 
         <section>
           <h2 class="title space-94">Постояные клиенты</h2>
-          <ul class="our-customs space-94-pb container">
-            <li>
+          <ul class="our-customs space-94-pb container grid">
+            <li class="grid__item">
               <a href="">
                 <svg class="icon-logo">
                   <use href="./images/symbol-defs.svg#icon-logo-1"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="grid__item">
               <a href="">
                 <svg class="icon-logo">
                   <use href="./images/symbol-defs.svg#icon-logo-2"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="grid__item">
               <a href="">
                 <svg class="icon-logo">
                   <use href="./images/symbol-defs.svg#icon-logo-3"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="grid__item">
               <a href="">
                 <svg class="icon-logo">
                   <use href="./images/symbol-defs.svg#icon-logo-4"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="grid__item">
               <a href="">
                 <svg class="icon-logo">
                   <use href="./images/symbol-defs.svg#icon-logo-5"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="grid__item">
               <a href="">
                 <svg class="icon-logo">
                   <use href="./images/symbol-defs.svg#icon-logo-6"></use>
@@ -493,7 +790,7 @@
               </ul>
             </address>
           </div>
-          <div>
+          <div class="footer-sec2">
             <b class="title-white footer-title-link">присоединяйтесь</b>
             <ul class="link-style footer-social-link">
               <li>
@@ -526,7 +823,7 @@
           </div>
         </div>
       </div>
-      <p class="developed">2020 | Developed by GoIT Students</p>
+      <!-- <p class="developed">2020 | Developed by GoIT Students</p> -->
     </footer>
 
     <script src="./js/modal.js"></script>
