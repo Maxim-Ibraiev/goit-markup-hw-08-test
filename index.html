@@ -11,17 +11,15 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header>
-      <nav class="nav-header container">
+    <header class="header">
+      <nav class="nav-header container break">
         <a href="index.html" class="logo">
-          <span class="logo-web">Web</span>
+          <span class="logo-web">Web </span>
           <span class="logo-studio">Studio</span>
         </a>
-        <div class="menu-button is-open">
+        <div class="menu " data-menu>
           <ul class="nav">
-            <li class="actual-page">
-              <a href="index.html" class="nav-link">Студия</a>
-            </li>
+            <li><a href="index.html" class="nav-link actual-page">Студия</a></li>
             <li><a href="portfolio.html" class="nav-link">Портфолио</a></li>
             <li><a href="" class="nav-link">Контакты</a></li>
           </ul>
@@ -30,7 +28,6 @@
               <a href="mailto:info@devstudio.com" class="icon-envelope">
                 <svg width="16px" height="11.2px">
                   <use
-                    class="icon-hover"
                     href="./images/symbol-defs.svg#icon-envelope"
                   ></use>
                 </svg>
@@ -38,10 +35,9 @@
               </a>
             </li>
             <li>
-              <a href="tel:+380961111111">
-                <svg width="10px" height="15px" class="icon-smartphone">
+              <a href="tel:+380961111111" class="icon-smartphone">
+                <svg width="10px" height="15px"   >
                   <use
-                    class="icon-hover"
                     href="./images/symbol-defs.svg#icon-smartphone"
                   ></use>
                 </svg>
@@ -50,59 +46,97 @@
             </li>
           </ul>
         </div>
+        <button type="button" class="menu-button " data-menu-button
+        aria-expanded="false" aria-label="Переключатель мобитьного меню">
+          <svg class="icon" height="40px" width="40px">
+            <use
+              class="icon-menu"
+              href="./images/symbol-defs.svg#icon-menu"
+            ></use>
+            <use class="icon-x" href="./images/symbol-defs.svg#icon-x"></use>
+          </svg>
+        </button>
       </nav>
     </header>
 
     <main>
       <!-- section 1 / Эффективные решения -->
-        <div>
+      <div>
         <section>
           <div class="main-header">
             <h1 class="header-style">
               Эффективные решения <br />
               для вашего бизнеса
             </h1>
-            <button data-modal-open  class="button">Заказать услугу</button>
+            <button data-modal-open class="button">Заказать услугу</button>
             <div data-modal class="backdrop is-hidden">
               <div class="modal">
                 <b>Оставьте свои данные, мы вам перезвоним</b>
                 <label class="modal-label">
-                  <input class="modal-border" type="text" name="name" placeholder=" " />
+                  <input
+                    class="modal-border"
+                    type="text"
+                    name="name"
+                    placeholder=" "
+                  />
                   <svg class="icon placeholder">
-                  <use href="./images/symbol-defs.svg#icon-person"></use>
+                    <use href="./images/symbol-defs.svg#icon-person"></use>
                   </svg>
                   <span class="placeholder">Имя</span>
                 </label>
                 <label class="modal-label">
-                  <input class="modal-border" type="tel" name="tel" placeholder=" "/>
+                  <input
+                    class="modal-border"
+                    type="tel"
+                    name="tel"
+                    placeholder=" "
+                  />
                   <svg class="icon placeholder">
-                  <use href="./images/symbol-defs.svg#icon-vector"></use>
+                    <use href="./images/symbol-defs.svg#icon-vector"></use>
                   </svg>
                   <span class="placeholder">Телефон</span>
                 </label>
                 <label class="modal-label">
-                  <input class="modal-border" type="email" name="email" placeholder=" "/>
+                  <input
+                    class="modal-border"
+                    type="email"
+                    name="email"
+                    placeholder=" "
+                  />
                   <svg class="icon placeholder">
-                  <use href="./images/symbol-defs.svg#icon-email-black"></use>
+                    <use href="./images/symbol-defs.svg#icon-email-black"></use>
                   </svg>
                   <span class="placeholder">Почта</span>
                 </label>
                 <label class="modal-label comment">
-                  <textarea class="modal-border" name="comment" rows="6" placeholder=" "></textarea>
+                  <textarea
+                    class="modal-border"
+                    name="comment"
+                    rows="6"
+                    placeholder=" "
+                  ></textarea>
                   <span class="placeholder">Комментарий</span>
                 </label>
                 <label class="agreement">
-                  <input class="box-hidden" type="checkbox" name="checkbox" id="">
+                  <input
+                    class="box-hidden"
+                    type="checkbox"
+                    name="checkbox"
+                    id=""
+                  />
                   <svg class="custom-checkbox check-mark">
-                  <use  href="./images/symbol-defs.svg#icon-checkbox"></use>
+                    <use href="./images/symbol-defs.svg#icon-checkbox"></use>
                   </svg>
-                  <span>Соглашаюсь с рассылкой и принимаю <a class="agreement-link" href="">Условия договора</a></span>
+                  <span
+                    >Соглашаюсь с рассылкой и принимаю
+                    <a class="agreement-link" href="">Условия договора</a></span
+                  >
                 </label>
                 <div class="button">Отправить</div>
-                <button data-modal-close class="data-modal-close" >
+                <button data-modal-close class="data-modal-close">
                   <div class="modal-esc">
                     <svg class="icon-x">
-                    <use href="./images/symbol-defs.svg#icon-x"></use>
+                      <use href="./images/symbol-defs.svg#icon-x"></use>
                     </svg>
                   </div>
                 </button>
@@ -481,12 +515,13 @@
           <div class="sub">
             <b class="title-white">Подпишитесь на рассылку</b>
             <div class="sub-space">
-              <input class="sub-email" type="email" placeholder="E-mail">
-              <button class="button sub-button">Подписаться
-              <svg class="icon-sub">
-              <use href="./images/symbol-defs.svg#icon-icon-send"></use>
-              </svg>
-            </button>
+              <input class="sub-email" type="email" placeholder="E-mail" />
+              <button class="button sub-button">
+                Подписаться
+                <svg class="icon-sub">
+                  <use href="./images/symbol-defs.svg#icon-icon-send"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -495,6 +530,6 @@
     </footer>
 
     <script src="./js/modal.js"></script>
-
+    <script src="./js/menu.js"></script>
   </body>
 </html>
